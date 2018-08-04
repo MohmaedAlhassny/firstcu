@@ -23,21 +23,9 @@ client.on('ready', () => {
     console.log(`in ${client.guilds.size} servers `)
     console.log(`[Dynasty] ${client.users.size}`)
     client.user.setStatus("DND");
-    client.user.setActivity('Dynasty Music.',{type: 'LISTENING'});
 });
 //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
-const prefix = "+";
-
-client.on('message', message => {
-	if(message.content === prefix + 'joinplz') {
-		    const voiceChannel = message.member.voiceChannel;
-		    if (!voiceChannel) {
-      return message.reply(`يرجى أن تكون في قناة صوتيه أولا!`);
-    }
-		voiceChannel.join()
-	}
-});
-
+const prefix = "="
 
 client.on('message', async msg => { // eslint-disable-line
 	if (msg.author.bot) return undefined;
@@ -278,4 +266,4 @@ ${prefix}queue ⇏ لمعرفة قآئمة التشغيل
 
 
    
-client.login(process.env.TOKEN);
+client.login(process.env.S);
